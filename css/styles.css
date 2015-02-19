@@ -1,17 +1,21 @@
+body {
+  background-image: url(../css/money.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .account {
   text-align: center;
   display: none;
-  background-color: #A5A36C;
+  background-color: #464D41;
   box-shadow: 5px 5px 2.5px #535233;
-  border: 1px solid;
-  border-color: #8C873E;
-  border-radius: 25px;
   padding: 15px;
   margin-top: 15px;
 }
 
 #sign-up, #deposit-withdraw {
-  background-color: #E0DFB1;
+  background-color: #DEDBBA;
   box-shadow: 5px 5px 2.5px #535233;
   border: 1px solid;
   border-radius: 15px;
@@ -27,4 +31,19 @@
 
 #deposit-withdraw {
   display: none;
+}
+
+h4 {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: white;
+}
+
+h1 {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
 }

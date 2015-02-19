@@ -30,13 +30,12 @@ $(document).ready(function () {
     $("form#deposit-withdraw").submit(function(event) {
     event.preventDefault();
 
-    var inputDeposit = parseFloat($("input#deposit").val());
-    var inputWithdrawl = parseFloat($("input#withdrawl").val());
+    var inputDeposit = $("input#deposit").val().length ? parseFloat($("input#deposit").val()) : 0;
+    var inputWithdrawl = $("input#withdrawl").val().length ? parseFloat($("input#withdrawl").val()) : 0;
 
     newAccount.deposit(inputDeposit);
-    // newAccount.withdrawl(inputWithdrawl);
+    newAccount.withdrawl(inputWithdrawl);
 
-  debugger;
 
     $("input#deposit").val("");
     $("input#withdrawl").val("");
