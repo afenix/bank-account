@@ -14,7 +14,7 @@ $(document).ready(function () {
     event.preventDefault();
 
     var inputName = $("input#name").val();
-    var intialDeposit = parseFloat($("input#initial-deposit").val());
+    var initialDeposit = parseFloat($("input#initial-deposit").val());
     var newAccount = Object.create(Bank);
     newAccount.name = inputName;
     newAccount.deposit(initialDeposit);
@@ -22,10 +22,10 @@ $(document).ready(function () {
     $("input#name").val("");
     $("input#initial-deposit").val("");
 
+    $(".deposit-withdraw").show();
     $(".results").show();
-    $("results#name").text(newAccount.name);
-    $("results#accountBalance").text(newAccount.deposit);
+      $(".name").text(newAccount.name);
+      $(".accountBalance").text(newAccount.balance.toFixed(2));
 
-
-  };
-};
+  });
+});
