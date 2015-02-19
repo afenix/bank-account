@@ -24,23 +24,23 @@ $(document).ready(function () {
 
     $("#deposit-withdraw").show();
     $(".account").show();
-      $(".name").text(newAccount.name);
-      $(".accountBalance").text(newAccount.balance.toFixed(2));
+    $(".name").text(newAccount.name);
+    $(".accountBalance").text(newAccount.balance.toFixed(2));
+
 
     $("form#deposit-withdraw").submit(function(event) {
-    event.preventDefault();
+      event.preventDefault();
 
-    var inputDeposit = $("input#deposit").val().length ? parseFloat($("input#deposit").val()) : 0;
-    var inputWithdraw = $("input#withdraw").val().length ? parseFloat($("input#withdraw").val()) : 0;
+      var inputDeposit = $("input#deposit").val().length ? parseFloat($("input#deposit").val()) : 0;
+      var inputWithdraw = $("input#withdraw").val().length ? parseFloat($("input#withdraw").val()) : 0;
 
-    newAccount.deposit(inputDeposit);
-    newAccount.withdraw(inputWithdraw);
+      newAccount.deposit(inputDeposit);
+      newAccount.withdraw(inputWithdraw);
 
+      $("input#deposit").val("");
+      $("input#withdraw").val("");
 
-    $("input#deposit").val("");
-    $("input#withdraw").val("");
-
-    $(".account").show();
+      $(".account").show();
       $(".accountBalance").text(newAccount.balance.toFixed(2));
 
     });

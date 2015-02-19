@@ -1,8 +1,12 @@
+.input-group-addon {
+  height: 10;
+}
+
 body {
   background-image: url(../css/money.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
 }
 
 .account {

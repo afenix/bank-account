@@ -20,14 +20,18 @@
           <form id="sign-up">
             <h4>Start banking by signing in:</h4>
             <div class="form-group">
-              <label for="name">Your Name:</label>
-              <input type="text" class="form-control" id="name">
+              <label for="name" >Enter Your Name:</label>
+              <input type="text" class="form-control" id="name" placeholder="eg. Ronda Rich">
             </div>
             <div class="form-group">
-              <label for="initial-deposit">Initial Deposit:</label>
-              <input type="text" class="form-control" id="initial-deposit">
+              <div class="input-group">
+                <span class="input-group-addon" id="sizing-addon2">$</span>
+                <input type="text" class="form-control" id='initial-deposit' placeholder="Enter Amount (to the nearest dollar)">
+                <span class="input-group-addon">.00</span>
+              </div>
             </div>
-            <button type="submit" class="btn btn-default">Create Bank Account</button>
+            <br>
+            <button type="submit" class="btn btn-success">Create Bank Account</button>
           </form>
         </div>
 
@@ -38,11 +42,11 @@
             <h4>Deposit or withdraw your money:</h4>
             <div class="form-group">
               <label for="deposit">Deposit Amount:</label>
-              <input type="text" class="form-control" id="deposit">
+              <input type="text" class="form-control" id="deposit" placeholder="Enter Amount (to the nearest dollar)">
             </div>
             <div class="form-group">
-              <label for="withdraw">Withdraw Amount:</label>
-              <input type="text" class="form-control" id="withdraw">
+              <label for="withdraw" placeholder='1000.00'>Withdraw Amount:</label>
+              <input type='text' id='withdraw' class='form-control' placeholder="Enter Amount (to the nearest dollar)">
             </div>
             <button type="submit" class="btn btn-success">Submit</button>
           </form>
