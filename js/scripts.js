@@ -3,7 +3,7 @@ var Bank = {
   deposit: function(amount) {
     this.balance = this.balance + amount;
   },
-  withdrawl: function(amount) {
+  withdraw: function(amount) {
     this.balance = this.balance - amount;
   }
 };
@@ -31,14 +31,14 @@ $(document).ready(function () {
     event.preventDefault();
 
     var inputDeposit = $("input#deposit").val().length ? parseFloat($("input#deposit").val()) : 0;
-    var inputWithdrawl = $("input#withdrawl").val().length ? parseFloat($("input#withdrawl").val()) : 0;
+    var inputWithdraw = $("input#withdraw").val().length ? parseFloat($("input#withdraw").val()) : 0;
 
     newAccount.deposit(inputDeposit);
-    newAccount.withdrawl(inputWithdrawl);
+    newAccount.withdraw(inputWithdraw);
 
 
     $("input#deposit").val("");
-    $("input#withdrawl").val("");
+    $("input#withdraw").val("");
 
     $(".account").show();
       $(".accountBalance").text(newAccount.balance.toFixed(2));
