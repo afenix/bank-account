@@ -22,10 +22,28 @@ $(document).ready(function () {
     $("input#name").val("");
     $("input#initial-deposit").val("");
 
-    $(".deposit-withdraw").show();
-    $(".results").show();
+    $("#deposit-withdraw").show();
+    $(".account").show();
       $(".name").text(newAccount.name);
       $(".accountBalance").text(newAccount.balance.toFixed(2));
 
+    $("form#deposit-withdraw").submit(function(event) {
+    event.preventDefault();
+
+    var inputDeposit = parseFloat($("input#deposit").val());
+    var inputWithdrawl = parseFloat($("input#withdrawl").val());
+
+    newAccount.deposit(inputDeposit);
+    // newAccount.withdrawl(inputWithdrawl);
+
+  debugger;
+
+    $("input#deposit").val("");
+    $("input#withdrawl").val("");
+
+    $(".account").show();
+      $(".accountBalance").text(newAccount.balance.toFixed(2));
+
+    });
   });
 });
