@@ -10,6 +10,6 @@ Clone repository and open the bank-account.html file.
 Currently the app will break if user enters cents in the output.
 ```
 ### Author:
-Alister Fenix
+Alister A. Fenix
 #### License
 Free and OS License. Code for the people by the people.
